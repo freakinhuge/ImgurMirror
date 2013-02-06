@@ -19,7 +19,7 @@ if(preg_match('/^a\/([a-z0-9]{5,7})/i', $imgur)) {
 			//Set the cached filename
 		if(file_exists($fname)){	
 			//Check if the file is already cached
-			echo "<img width=50% border=2 width=50% src=\"".$fname."\">" . "<br><br>";
+			echo "<img width=50% border=2 src=\"".$fname."\">" . "<br><br>";
 				//Add the cached file to the html
 		}
 		else {
@@ -36,7 +36,7 @@ if(preg_match('/^a\/([a-z0-9]{5,7})/i', $imgur)) {
 			else {
 				file_put_contents($fname, $image);
 					//Save the image to cache
-				echo "<img width=50% border=2 width=50% src=\"".$fname."\">" . "<br><br>";
+				echo "<img width=50% border=2 src=\"".$fname."\">" . "<br><br>";
 					//Add the cached file to the html
 			}
 		}
